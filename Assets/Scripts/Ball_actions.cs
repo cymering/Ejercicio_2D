@@ -15,8 +15,7 @@ public class Ball_actions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         transformDelObjeto.Translate(Vector3.down * Time.deltaTime);
-
+       
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Left Click");
