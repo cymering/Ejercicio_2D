@@ -222,7 +222,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135412042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45, y: 2.23, z: 0}
+  m_LocalPosition: {x: 1.06, y: 0.82, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -699,7 +699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534796973}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4981006, y: 1.0162001, z: 0}
+  m_LocalPosition: {x: 13.09, y: 1.0162001, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -841,6 +841,7 @@ GameObject:
   - component: {fileID: 702632803}
   - component: {fileID: 702632802}
   - component: {fileID: 702632801}
+  - component: {fileID: 702632805}
   m_Layer: 0
   m_Name: Circle (10)
   m_TagString: Untagged
@@ -945,13 +946,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702632800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.528101, y: 1.1062002, z: 0}
+  m_LocalPosition: {x: 5.27, y: 0.61, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1705277047}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &702632805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702632800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9310a2822f22c4192aeeac318f1b656a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleSpeed: 3
+  obstacleTransform: {fileID: 702632804}
 --- !u!1 &704211522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1083,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704211522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.2881007, y: 1.0162001, z: 0}
+  m_LocalPosition: {x: 5.54, y: 1.9, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2264,7 +2279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653866992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.898101, y: 2.2662, z: 0}
+  m_LocalPosition: {x: 2.44, y: 2.74, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2348,6 +2363,7 @@ GameObject:
   - component: {fileID: 1718544096}
   - component: {fileID: 1718544095}
   - component: {fileID: 1718544098}
+  - component: {fileID: 1718544099}
   m_Layer: 0
   m_Name: Circle (3)
   m_TagString: Untagged
@@ -2436,7 +2452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718544094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4781003, y: 2.9562001, z: 0}
+  m_LocalPosition: {x: 6.3, y: 2.9562001, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2459,6 +2475,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1718544099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718544094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9310a2822f22c4192aeeac318f1b656a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleSpeed: 3
+  obstacleTransform: {fileID: 1718544097}
 --- !u!1001 &1765643708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2540,6 +2570,7 @@ GameObject:
   - component: {fileID: 1768329702}
   - component: {fileID: 1768329701}
   - component: {fileID: 1768329704}
+  - component: {fileID: 1768329705}
   m_Layer: 0
   m_Name: Circle (5)
   m_TagString: Untagged
@@ -2651,6 +2682,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1768329705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768329700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9310a2822f22c4192aeeac318f1b656a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleSpeed: 3
+  obstacleTransform: {fileID: 1768329703}
 --- !u!1 &1781552808
 GameObject:
   m_ObjectHideFlags: 0
