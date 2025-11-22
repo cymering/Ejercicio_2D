@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class MovingObstacles : MonoBehaviour
 {
-    [SerializeField] float obstacleSpeed = 0.5f;
+ 
     [SerializeField] Transform obstacleTransform;
 
-    int veces = 0;
-
+    public float speed = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,21 +18,16 @@ public class MovingObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (veces < 150)
-        {
-            obstacleTransform.Translate(Vector3.left * obstacleSpeed * Time.deltaTime);
-            veces++;
-        }
-        else if (veces >= 150 && veces < 300)
-        {
-            obstacleTransform.Translate(Vector3.right * obstacleSpeed * Time.deltaTime);
-            veces++;
-        }
-        else
-        {
-            veces = 0;
-        }
-
+  
+        if (Input.GetKey(KeyCode.A))
+            obstacleTransform.Translate(Vector3.left * speed * Time.deltaTime);   
+        
+        if (Input.GetKey(KeyCode.S))
+            obstacleTransform.Translate(Vector3.right * speed * Time.deltaTime);
+        
+         if (Input.GetKey(KeyCode.Space))
+            speed = 8f;
+        else 
+            speed = 3f; 
     }
 }

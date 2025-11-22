@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Ball_actions : MonoBehaviour
+public class Crear_ball : MonoBehaviour
 {
-    [SerializeField] Transform transformDelObjeto;
+    [SerializeField] public GameObject ball; 
+    
+    [Serialize] public Vector3 mousePosition;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +23,10 @@ public class Ball_actions : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Left Click");
-            Vector3 mousePos = Input.mousePosition;
-            mousePos.z = Camera.main.WorldToScreenPoint(transformDelObjeto.position).z;
-            transformDelObjeto.position = Camera.main.ScreenToWorldPoint(mousePos);
+            mousePosition = Input.mousePosition;
+            Instantiate(ball, mousePosition, UnityEngine.Quaternion.identity);
         }
     }
+
+   
 }
