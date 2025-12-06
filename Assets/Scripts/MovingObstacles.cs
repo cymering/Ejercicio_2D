@@ -26,8 +26,8 @@ public class MovingObstacles : MonoBehaviour
             ball[0].transform.Translate(Vector3.right * speed * Time.deltaTime);
         
          if (Input.GetKey(KeyCode.Space))
-            speed = 8f;
-        else 
-            speed = 3f; 
+         {
+                ball[0].transform.Translate(Vector3.up * speed * Time.deltaTime);
+         }
     }
 }
