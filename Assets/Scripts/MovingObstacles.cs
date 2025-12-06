@@ -5,8 +5,8 @@ using UnityEngine;
 public class MovingObstacles : MonoBehaviour
 {
  
-    [SerializeField] Transform obstacleTransform;
-
+    //[SerializeField] Transform obstacleTransform;
+    [SerializeField] public GameObject[] ball; 
     public float speed = 5f;
 
     // Start is called before the first frame update
@@ -20,10 +20,10 @@ public class MovingObstacles : MonoBehaviour
     {
   
         if (Input.GetKey(KeyCode.A))
-            obstacleTransform.Translate(Vector3.left * speed * Time.deltaTime);   
+            ball[0].transform.Translate(Vector3.left * speed * Time.deltaTime);   
         
         if (Input.GetKey(KeyCode.S))
-            obstacleTransform.Translate(Vector3.right * speed * Time.deltaTime);
+            ball[0].transform.Translate(Vector3.right * speed * Time.deltaTime);
         
          if (Input.GetKey(KeyCode.Space))
             speed = 8f;

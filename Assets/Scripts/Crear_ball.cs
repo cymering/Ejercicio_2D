@@ -9,6 +9,9 @@ public class Crear_ball : MonoBehaviour
     
     //public float x;
 
+
+    public float speed = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,7 @@ public class Crear_ball : MonoBehaviour
             //Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             Instantiate(ball[0], mousePosition, Quaternion.identity);
         }
+        
     }
    
 }
