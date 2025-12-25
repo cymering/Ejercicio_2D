@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Crear_ball : MonoBehaviour
 {
     [SerializeField] public GameObject[] ball; 
+     public AudioSource sonido; 
+     public AudioClip clip;
     
     //public float x;
 
@@ -33,8 +36,16 @@ public class Crear_ball : MonoBehaviour
 
             //Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             Instantiate(ball[0], mousePosition, Quaternion.identity);
+
+            sonido.PlayOneShot(clip);   
         }
         
     }
-   
+
+    void OnCollisionEnter(Collision collision)
+    {
+        UnityEngine.Debug.Log("Colisión con la bola");
+        //sonido.PlayOneShot(clip);
+    }
+
 }
