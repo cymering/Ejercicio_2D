@@ -28,4 +28,10 @@ public class Helices : MonoBehaviour
         sonido.PlayOneShot(clip);   
        
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 1f);  
+    }
 }

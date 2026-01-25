@@ -39,7 +39,10 @@ public class Crear_ball : MonoBehaviour
 
             sonido.PlayOneShot(clip);   
         }
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }   
     }
 
     void OnCollisionEnter(Collision collision)
